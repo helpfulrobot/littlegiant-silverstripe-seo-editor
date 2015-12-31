@@ -116,7 +116,7 @@ class SEOEditorMetaTitleColumn extends GridFieldDataColumns implements
      */
     public function getErrorMessages()
     {
-            return '<div class="seo-editor-errors">' .
+        return '<div class="seo-editor-errors">' .
                         '<span class="seo-editor-message seo-editor-message-too-short">This title is too short. It should be greater than 10 characters long.</span>' .
                         '<span class="seo-editor-message seo-editor-message-too-long">This title is too long. It should be less than 55 characters long.</span>' .
                         '<span class="seo-editor-message seo-editor-message-duplicate">This title is a duplicate. It should be unique.</span>' .

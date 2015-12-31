@@ -73,8 +73,12 @@ class SEOEditorAdmin extends ModelAdmin
         $context->setFilters($filters);
 
         // Namespace fields, for easier detection if a search is present
-        foreach ($context->getFields() as $field) $field->setName(sprintf('q[%s]', $field->getName()));
-        foreach ($context->getFilters() as $filter) $filter->setFullName(sprintf('q[%s]', $filter->getFullName()));
+        foreach ($context->getFields() as $field) {
+            $field->setName(sprintf('q[%s]', $field->getName()));
+        }
+        foreach ($context->getFilters() as $filter) {
+            $filter->setFullName(sprintf('q[%s]', $filter->getFullName()));
+        }
 
         return $context;
     }
@@ -118,7 +122,6 @@ class SEOEditorAdmin extends ModelAdmin
 
             $config->addComponent(new SEOEditorMetaTitleColumn());
             $config->addComponent(new SEOEditorMetaDescriptionColumn());
-
         }
 
         return $form;
@@ -262,6 +265,4 @@ class SEOEditorAdmin extends ModelAdmin
             )
         );
     }
-
-
 }

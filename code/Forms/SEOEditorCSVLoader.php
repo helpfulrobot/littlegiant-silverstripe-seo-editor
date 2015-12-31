@@ -42,5 +42,4 @@ class SEOEditorCSVLoader extends CsvBulkLoader
 
         return $page->ID;
     }
-
 }
